@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1"><h1>List of restaurants</h1></span>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <ul class="list-group">
+      <% @restaurants.each do |restaurant| %>
+          <li class="list-group "><%=link_to restaurant.name, restaurant_path(restaurant)%>
+          </li>
+      <% end %>
+      <br>
+      <%= link_to 'Add new restaurant', new_restaurant_path %>
+  </div>
+</div>
+
